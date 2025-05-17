@@ -123,7 +123,7 @@
           </div>
 
           <div class="col-lg-8" id="bookmassage" >
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -153,15 +153,11 @@
 
                 <div class="col-md-12">
                   <label for="time" class="form-label fw-bold">Additional Information</label>
-                  <textarea class="form-control" name="message" rows="6" placeholder="Additional Information" required=""></textarea>
+                  <textarea class="form-control" name="information" rows="6" placeholder="Additional Information" id="add_info" required=""></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Book An Appointment</button>
+                  <button onclick="bookmassage()">Book An Appointment</button>
                 </div>
 
               </div>
@@ -227,6 +223,27 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+    function bookmassage(){
+      Let number = +2348120563516;
+      Let name = document.getElementById('name').value;
+      Let email = document.getElementById('email').value;
+      Let phone = document.getElementById('phone').value;
+      Let date = document.getElementById('date').value;
+      Let time = document.getElementById('time').value;
+      Let add_info = document.getElementById('add_info').value;
+
+      var url = "https://wa.me/"+ number + "?text= Hello Velvet Touch!, I want to book an Appointment %a0
+        "I am :" + name + "%0a";
+        "Phone Number :" + phone + "%0a";
+        "Email :" + email + "%0a";
+        "Date :" + date + "%0a";
+        "Time :" + time + "%0a";
+        "Additional information :" + add_info + "%0a";
+
+      window.open(url, '_blank').focus();
+    }
+  </script>
 
 </body>
 
