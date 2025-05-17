@@ -214,27 +214,25 @@
   <div id="preloader"></div>
   <script type="text/javascript">
     function bookmassage(){
-      Let number = +2348120563516;
-      Let name = document.getElementById('name').value;
-      Let email = document.getElementById('email').value;
-      Let phone = document.getElementById('phone').value;
-      Let date = document.getElementById('date').value;
-      Let time = document.getElementById('time').value;
-      Let add_info = document.getElementById('add_info').value;
+      let number = +2348120563516;
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let phone = document.getElementById('phone').value;
+      let date = document.getElementById('date').value;
+      let time = document.getElementById('time').value;
+      let add_info = document.getElementById('add_info').value;
 
-      var url = "https://wa.me/"+ number + "?text= Hello Velvet Touch!, I want to book an Appointment %a0
-        "I am :" + name + "%0a";
-        "Phone Number :" + phone + "%0a";
-        "Email :" + email + "%0a";
-        "Date :" + date + "%0a";
-        "Time :" + time + "%0a";
-        "Additional information :" + add_info + "%0a";
+      let url = "https://wa.me/" + number + "?text=Hello Velvet Touch!, I want to book an Appointment%0a" +
+                "I am: " + name + "%0a" +
+                "Phone Number: " + phone + "%0a" +
+                "Email: " + email + "%0a" +
+                "Date: " + date + "%0a" +
+                "Time: " + time + "%0a" +
+                "Additional information: " + add_info;
 
       window.open(url, '_blank').focus();
     }
   </script>
-
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
